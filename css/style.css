@@ -2012,4 +2012,9 @@ body {
 .about,
 #contact {
     background-image: none !important;
+}/* Hide the scroll-down arrow */
+.scroll-down,
+.scroll-down a,
+.scroll-down i {
+    display: none !important;
 }
