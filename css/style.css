@@ -2017,4 +2017,10 @@ body {
 .scroll-down a,
 .scroll-down i {
     display: none !important;
+}.hero .scroll-down {
+    display: none !important;
+}
+
+.hero a[aria-label*="التمرير"] {
+    display: none !important;
 }
