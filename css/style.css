@@ -373,16 +373,6 @@ button {
     margin-bottom: 2rem;
 }
 
-/* زر التمرير لأسفل */
-.scroll-down {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--brown-light);
-    font-size: 1.2rem;
-    animation: bounceDown 2s infinite;
-}
 
 @keyframes bounceDown {
     0%, 100% { transform: translateX(-50%) translateY(0); }
