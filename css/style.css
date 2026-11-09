@@ -1950,4 +1950,53 @@ button {
 #about .about-text p strong,
 #about .about-signature span {
     color: #FFFFFF !important;
+}/* Animated Organic Circular Background */
+
+.hero,
+.about,
+.portfolio,
+#contact {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Multiple irregular circular rings */
+.hero::before,
+.about::before,
+.portfolio::before,
+#contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 500' fill='none'%3E%3Cg stroke='%23F95C4B' stroke-opacity='.23' stroke-width='1.4'%3E%3Cpath d='M150 55 C220 25 285 70 290 135 C300 205 235 235 165 220 C90 205 65 145 95 95 C110 75 130 60 150 55Z'/%3E%3Cpath d='M150 75 C210 48 265 85 270 140 C278 190 225 215 170 205 C115 195 85 150 110 110 C120 92 135 80 150 75Z'/%3E%3Cpath d='M150 95 C195 75 245 100 250 145 C255 180 215 195 175 190 C135 185 105 155 125 120 C130 108 140 100 150 95Z'/%3E%3Cpath d='M470 260 C545 220 625 260 630 330 C640 405 565 440 495 420 C425 400 405 345 435 295 C445 280 455 268 470 260Z'/%3E%3Cpath d='M470 280 C530 250 600 280 605 335 C612 390 550 420 500 400 C450 380 430 345 455 305 C460 295 465 285 470 280Z'/%3E%3Cpath d='M470 300 C520 275 575 300 580 340 C585 380 540 400 505 385 C465 370 450 340 470 315 C470 310 470 305 470 300Z'/%3E%3Cpath d='M320 20 C375 -5 425 25 430 75 C435 125 390 150 345 135 C295 120 275 80 300 45 C305 35 312 25 320 20Z'/%3E%3Cpath d='M40 350 C100 315 165 345 165 395 C165 445 110 470 65 445 C20 425 0 390 20 365 C25 358 32 353 40 350Z'/%3E%3Cpath d='M50 365 C95 340 145 360 145 395 C145 430 105 450 70 430 C35 410 20 390 35 375 C40 370 45 367 50 365Z'/%3E%3Cpath d='M570 40 C620 20 670 55 665 100 C660 145 615 165 580 140 C545 115 535 75 555 55 C560 48 565 43 570 40Z'/%3E%3Cpath d='M570 55 C610 40 645 65 645 100 C645 130 610 145 585 125 C560 105 550 80 565 65 C567 60 570 58 570 55Z'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size: 700px 500px;
+    background-repeat: repeat;
+
+    animation: organicCircleMove 22s ease-in-out infinite alternate;
+}
+
+/* Keep content above the background */
+.hero > *,
+.about > *,
+.portfolio > *,
+#contact > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Smooth movement */
+@keyframes organicCircleMove {
+    from {
+        background-position: 0 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        background-position: 300px 180px;
+        transform: translateX(15px);
+    }
 }
