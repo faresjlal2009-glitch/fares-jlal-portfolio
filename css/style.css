@@ -1999,4 +1999,27 @@ button {
         background-position: 300px 180px;
         transform: translateX(15px);
     }
+}/* =========================================
+   UNIFIED WEBSITE BACKGROUND
+========================================= */
+
+body {
+    background: #171616 !important;
+}
+
+/* توحيد خلفية جميع الأقسام */
+.hero,
+.about,
+.portfolio,
+#portfolio,
+.contact,
+#contact {
+    background: transparent !important;
+}
+
+/* منع أي خلفية إضافية من التدرجات */
+.hero,
+.about,
+#contact {
+    background-image: none !important;
 }
